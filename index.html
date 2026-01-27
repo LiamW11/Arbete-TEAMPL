@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Job Matcher - AI-driven matchning</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>LinkedIn Job Matcher</h1>
+      <p class="subtitle">Matcha din profil mot jobbannonser med AI</p>
+    </header>
+
+    <!-- Status indicator -->
+    <div id="status-indicator" class="status-indicator hidden">
+      <div class="status-dot"></div>
+      <span id="status-text">Kontrollerar system...</span>
+    </div>
+
+    <!-- Upload form -->
+    <div class="card upload-section" id="upload-section">
+      <h2>Ladda upp din LinkedIn-profil</h2>
+      
+      <form id="upload-form">
+        <div class="form-group">
+          <label for="resume-file" class="file-label">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+            <span id="file-label-text">Välj PDF-fil</span>
+          </label>
+          <input 
+            type="file" 
+            id="resume-file" 
+            name="resume" 
+            accept=".pdf" 
+            required
+            class="file-input"
+          >
+          <small class="help-text">Din LinkedIn-profil som PDF (max 10MB)</small>
+        </div>
+
+        <div class="form-group">
+          <label for="job-role">Vilken roll söker du?</label>
+          <input 
+            type="text" 
+            id="job-role" 
+            name="jobRole" 
+            placeholder="t.ex. Frontend Developer, UX Designer, Backend Developer" 
+            required
+            class="text-input"
+          >
+          <small class="help-text">Ange den typ av roll du är intresserad av</small>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="analyze-btn">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          Analysera matchningar
+        </button>
+      </form>
+    </div>
+
+    <!-- Loading state -->
+    <div class="card loading-section hidden" id="loading-section">
+      <div class="loading-spinner"></div>
+      <h3>Analyserar matchningar...</h3>
+      <p id="loading-message">Extraherar text från PDF...</p>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </div>
+
+    <!-- Results section -->
+    <div id="results-section" class="results-section hidden">
+      <div class="results-header">
+        <h2>Matchningsresultat</h2>
+        <div class="results-meta">
+          <span id="results-count">0 jobb analyserade</span>
+          <span id="results-duration"></span>
+        </div>
+      </div>
+
+      <div class="results-filters">
+        <button class="filter-btn active" data-filter="all">Alla</button>
+        <button class="filter-btn" data-filter="high">Hög match (70+)</button>
+        <button class="filter-btn" data-filter="medium">Medium match (40-69)</button>
+        <button class="filter-btn" data-filter="low">Låg match (0-39)</button>
+      </div>
+
+      <div id="results-container" class="results-container">
+        <!-- Results will be inserted here -->
+      </div>
+
+      <button class="btn btn-secondary" id="new-analysis-btn">
+        Gör en ny analys
+      </button>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

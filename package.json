@@ -1,0 +1,19 @@
+{
+  "name": "linkedin-job-matcher",
+  "version": "1.0.0",
+  "description": "Match LinkedIn profiles against job postings using Ollama AI",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node server/server.js"
+  },
+  "keywords": ["linkedin", "job-matcher", "ollama", "ai"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "axios": "^1.6.0",
+    "cors": "^2.8.5"
+  }
+}
