@@ -3,10 +3,6 @@
 ## Steg-för-steg setup i 5 minuter
 
 ### 1. Öppna projektet i VS Code
-```bash
-cd linkedin-job-matcher
-code .
-```
 
 ### 2. Installera Python-beroenden
 Öppna en terminal i VS Code (`Ctrl+`` eller `Cmd+``) och kör:
