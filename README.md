@@ -1,4 +1,4 @@
-# LinkedIn Job Matcher
+# MarketSync
 
 En lokal webbapplikation som matchar din LinkedIn-profil mot jobbannonser från Arbetsförmedlingens JobSearch API med hjälp av Ollama AI för semantisk analys.
 

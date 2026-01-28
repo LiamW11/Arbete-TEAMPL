@@ -1,5 +1,5 @@
 /**
- * LinkedIn Job Matcher Server
+ * MarketSync Server
  * Main Express server that handles PDF uploads, job search, and AI matching
  */
 
@@ -174,10 +174,10 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`
 ╔════════════════════════════════════════════════════╗
-║  LinkedIn Job Matcher Server                       ║
+║  MarketSync Server                                 ║
 ╠════════════════════════════════════════════════════╣
-║  Server running: http://localhost:${PORT}           ║
-║  Status: http://localhost:${PORT}/api/health        ║
+║  Server running: http://localhost:${PORT}          ║
+║  Status: http://localhost:${PORT}/api/health       ║
 ╠════════════════════════════════════════════════════╣
 ║  Requirements:                                     ║
 ║  • Ollama running on http://localhost:11434        ║

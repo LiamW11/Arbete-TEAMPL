@@ -1,4 +1,4 @@
-# LinkedIn Job Matcher - Komplett Dokumentation
+# MarketSync - Komplett Dokumentation
 
 ## 📊 ARKITEKTUR
 
@@ -747,4 +747,4 @@ curl "https://jobsearch.api.jobtechdev.se/search?q=developer&limit=5"
 
 ---
 
-**Lycka till med din LinkedIn Job Matcher!** 🚀
+**Lycka till med din MarketSync!** 🚀

@@ -101,7 +101,9 @@ function createMatchingPrompt(profileText, job) {
   const safeDescription = sanitizeText(job.description || '').substring(0, 2000);
   const safeRequirements = sanitizeText(job.requirements || '');
 
-  return `Du är en expert på att matcha kandidatprofiler mot jobbannonser.
+  return `Du har mycket erfarenhet av att matcha kandidatprofiler mot jobbannonser för att räkna ut hur bra en kandidat passar för en viss roll.
+
+Givet nedanstående kandidatprofil och jobbannons, analysera hur väl kandidaten matchar jobbet.
 
 KANDIDATPROFIL:
 ${safeProfile}
@@ -130,6 +132,7 @@ MOTIVERING:
 Viktigt:
 - Basera ENDAST analys på faktiskt innehåll i profilen
 - Inga antaganden eller gissningar
+- Ifall du blir osäker är det bättra att sänka poängen än att gissa högt
 - Vara specifik och konkret
 - Matcha semantiskt (t.ex. "React" matchar "frontend-utveckling")`;
 }

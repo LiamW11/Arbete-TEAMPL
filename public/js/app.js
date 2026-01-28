@@ -1,5 +1,5 @@
 /**
- * LinkedIn Job Matcher - Frontend Application
+ * MarketSync - Frontend Application
  */
 
 // State management
